@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://db1mi6ymt4tyi"]
+
+[ext_resource type="Texture2D" uid="uid://y53po0vu5b4r" path="res://Textures/icon.svg" id="1_yd3cc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_628rk"]
+
+[node name="Node2D" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_628rk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yd3cc")
