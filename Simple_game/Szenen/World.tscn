@@ -64,7 +64,7 @@ position = Vector2(814, 244)
 
 [node name="Explosive" parent="." instance=ExtResource("2_1imh0")]
 position = Vector2(804, 501)
-exp_force = 10.0
+crate = 2
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_8eqe1")
