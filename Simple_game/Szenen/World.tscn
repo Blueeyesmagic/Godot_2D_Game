@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c18518u5p8df1"]
+[gd_scene load_steps=5 format=3 uid="uid://c18518u5p8df1"]
 
 [ext_resource type="PackedScene" uid="uid://db1mi6ymt4tyi" path="res://Szenen/Bullet.tscn" id="1_3sd1e"]
+[ext_resource type="PackedScene" uid="uid://d06i6rqvit4gf" path="res://Szenen/Spawnables.tscn" id="2_1imh0"]
+[ext_resource type="Script" path="res://Szenen/Node.gd" id="3_8eqe1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a641v"]
 size = Vector2(40, 38)
@@ -58,4 +60,11 @@ position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_a641v")
 
 [node name="Node2D" parent="." instance=ExtResource("1_3sd1e")]
-position = Vector2(560, 321)
+position = Vector2(814, 244)
+
+[node name="Explosive" parent="." instance=ExtResource("2_1imh0")]
+position = Vector2(804, 501)
+exp_force = 10.0
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("3_8eqe1")
