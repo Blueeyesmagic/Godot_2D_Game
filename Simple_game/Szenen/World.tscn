@@ -3,64 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://db1mi6ymt4tyi" path="res://Szenen/Bullet.tscn" id="1_3sd1e"]
 [ext_resource type="PackedScene" uid="uid://d06i6rqvit4gf" path="res://Szenen/Spawnables.tscn" id="2_1imh0"]
 [ext_resource type="Script" path="res://Szenen/Node.gd" id="3_8eqe1"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a641v"]
-size = Vector2(40, 38)
+[ext_resource type="PackedScene" uid="uid://bfrcj2tfb8so" path="res://Szenen/Map.tscn" id="4_lata2"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Barriers" type="Node" parent="."]
-
-[node name="Barrier" type="Panel" parent="Barriers"]
-offset_left = -11.0
-offset_right = 29.0
-offset_bottom = 40.0
-scale = Vector2(29.373, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Barriers/Barrier"]
-position = Vector2(20, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/Barrier/StaticBody2D"]
-shape = SubResource("RectangleShape2D_a641v")
-
-[node name="Barrier2" type="Panel" parent="Barriers"]
-offset_left = -11.0
-offset_top = 635.0
-offset_right = 29.0
-offset_bottom = 675.0
-scale = Vector2(29.373, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Barriers/Barrier2"]
-position = Vector2(20, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/Barrier2/StaticBody2D"]
-shape = SubResource("RectangleShape2D_a641v")
-
-[node name="Barrier3" type="Panel" parent="Barriers"]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(1, 16.84)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Barriers/Barrier3"]
-position = Vector2(20, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/Barrier3/StaticBody2D"]
-shape = SubResource("RectangleShape2D_a641v")
-
-[node name="Barrier4" type="Panel" parent="Barriers"]
-offset_left = 1124.0
-offset_right = 1164.0
-offset_bottom = 40.0
-scale = Vector2(1, 16.84)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Barriers/Barrier4"]
-position = Vector2(20, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/Barrier4/StaticBody2D"]
-shape = SubResource("RectangleShape2D_a641v")
-
-[node name="Node2D" parent="." instance=ExtResource("1_3sd1e")]
-position = Vector2(814, 244)
 
 [node name="Explosive" parent="." instance=ExtResource("2_1imh0")]
 position = Vector2(804, 501)
@@ -68,3 +13,20 @@ crate = 2
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_8eqe1")
+
+[node name="TileMap" parent="." instance=ExtResource("4_lata2")]
+
+[node name="Crate" parent="." instance=ExtResource("2_1imh0")]
+position = Vector2(214, 289)
+
+[node name="Crate2" parent="." instance=ExtResource("2_1imh0")]
+position = Vector2(431, 289)
+
+[node name="Crate3" parent="." instance=ExtResource("2_1imh0")]
+position = Vector2(969, 289)
+
+[node name="Crate4" parent="." instance=ExtResource("2_1imh0")]
+position = Vector2(683, 289)
+
+[node name="Bullet" parent="." instance=ExtResource("1_3sd1e")]
+position = Vector2(818, 200)

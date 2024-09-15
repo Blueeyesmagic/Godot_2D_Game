@@ -5,4 +5,4 @@ extends Node
 
 func _input(_event):
 	if Input.is_action_pressed("W"):
-		Explosive.explode(Bullet)
+		Explosive.explode()

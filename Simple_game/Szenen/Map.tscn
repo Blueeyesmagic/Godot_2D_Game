@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfrcj2tfb8so"]
+
+[ext_resource type="Texture2D" uid="uid://dccg8a33edcq" path="res://Textures/Envirorment/plattform.jpg" id="1_ncpct"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjm1i"]
+texture = ExtResource("1_ncpct")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_lkutk"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_bjm1i")
+
+[node name="TileMap" type="TileMap"]
+scale = Vector2(5, 5)
+tile_set = SubResource("TileSet_lkutk")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 1, 1, 0, 458753, 1, 0, 2, 1, 0, 458754, 1, 0, 3, 1, 0, 458755, 1, 0, 4, 1, 0, 458756, 1, 0, 5, 1, 0, 458757, 1, 0, 6, 1, 0, 458758, 1, 0, 7, 1, 0, 458759, 1, 0, 8, 1, 0, 458760, 1, 0, 9, 1, 0, 458761, 1, 0, 10, 1, 0, 458762, 1, 0, 11, 1, 0, 458763, 1, 0, 12, 1, 0, 458764, 1, 0, 13, 1, 0, 458765, 1, 0, 14, 1, 0, 65550, 1, 0, 131086, 1, 0, 196622, 1, 0, 262158, 1, 0, 327694, 1, 0, 393230, 1, 0, 458766, 1, 0)
